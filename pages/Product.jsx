@@ -1,12 +1,8 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { useFormik } from "formik";
+import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { profileService } from "../API/profile/ProfileService";
-import { timezoneService } from "../API/timezone/TimezoneService";
-import Button from "../components/Button";
 import { QueryKeys } from "../helpers/QueryKeys";
-import { useTimezone } from "../query-hooks/useTimezone";
 
 export default function Product() {
 
