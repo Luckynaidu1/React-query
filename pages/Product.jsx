@@ -9,11 +9,7 @@ import { QueryKeys } from "../helpers/QueryKeys";
 import { useTimezone } from "../query-hooks/useTimezone";
 
 export default function Product() {
-  // individual stages for pagination
-  // const [page, setPage] = useState(1);
-  // const [limit, setLimit] = useState(10);
 
-  const [pagination, setPagination] = useState({ page: 1, limit: 10 });
   
   const {
     isLoading,
@@ -52,7 +48,7 @@ export default function Product() {
          </div>
          <div className='row justify-content-center'> 
             {
-            profiles.map((product,index)=>{
+            filter.map((product,index)=>{
                 return<>   
                 <div className='mb-4 col-md-3'key={product.id} > 
              <div className="card" >
