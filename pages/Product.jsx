@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { profileService } from "../API/profile/ProfileService";
-import { QueryKeys } from "../helpers/QueryKeys";
 
 export default function Product() {
 
@@ -13,10 +12,8 @@ export default function Product() {
     isError,
     error,
   } = useQuery({
-    queryKey: [QueryKeys.ProfilesGet, pagination],
     queryFn: () =>
     profileService
-    .getProfiles(pagination.page, pagination.limit)
     .then((res) => res.data),
     keepPreviousData: true,
   });
